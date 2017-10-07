@@ -1,0 +1,21 @@
+<div class="JasonSaysChatBox" style="_width:300px;" id="divMainDirectoryBox" onmouseover="checkReadBox('divMainDirectoryBox')">
+	<div style="position:relative;">
+		<div style="position:relative;">{$tittle}</div>
+		<div class="closeX" title="" onclick="byebye('divMainDirectoryBox')">X</div>
+	</div>
+	<div class="JsonSaysRequestsBox">
+		<div class="JsonSaysFindBox" id="JsonSaysFindBox" title="{$findContact}">
+			<div style="position:relative;margin-right:30px;">
+				<input type="text" id="txtFindMe" name="txtFindMe" value="{$findLbl}" class="textBox" onclick="this.value=''" />
+			</div>
+			<div style="position:absolute;right:0px;top:0px;cursor:pointer;margin-top:10px;margin-right:5px;" onclick="JsonFindUser()">
+				>>
+			</div>
+		</div>
+		<div style="margin-top:10px;margin-bottom:10px;" class="JsonSaysFindBox" id="JsonSaysConactOPtion">
+		</div>
+		<div style="margin-top:10px;" id="JsonSaysDirectoryBox">
+			{include file='usersDirectoryList.tpl.html'}
+		</div>
+	</div>
+</div>

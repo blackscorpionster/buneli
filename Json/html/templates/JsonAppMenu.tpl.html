@@ -1,0 +1,6 @@
+<div style="height:30px;text-align:center;padding-top:7px;">
+	{$optTittle}
+</div>
+{foreach from=$menu key=appOptName item=arrOpt}
+	<div id="DivAppPpt{$arrOpt.OPT_COD}"  {if $arrOpt.OPT_COD==7 and $requests>0}class="menuOptionOn"{else}class="menuOption"{/if} onclick="{$arrOpt.COMMAND}">{$appOptName|lower|capitalize}</div>
+{/foreach}

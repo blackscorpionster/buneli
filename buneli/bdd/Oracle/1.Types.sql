@@ -1,0 +1,3 @@
+CREATE OR REPLACE PACKAGE BUNELI_TYPES AS
+    TYPE type_cursor is ref cursor;
+END BUNELI_TYPES;

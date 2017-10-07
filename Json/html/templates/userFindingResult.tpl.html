@@ -1,0 +1,15 @@
+{foreach from=$resultado key=pos item=arrDatos}
+<div id="divContactsFindingResults" style="background-color:#E4E4E4">
+	<div style="font-weight:bold;">{$arrDatos.TXT_NAME} {$arrDatos.TXT_SURNAME}</div>
+	<div>{$arrDatos.TXT_COUNTRY|lower|capitalize} </div>
+	<div>{$contactMessage}</div>
+	<div style="position:relative;">
+		<div style="position:relative;margin-right:5px;">
+			<textarea name="txtContactMessage" id="txtContactMessage" class="JsonSaysWriteBox" maxlength="50" style="width:87%;"></textarea>
+		</div>
+		<div title="{$sendRequest}" style="position:absolute;right:0px;top:0px;cursor:pointer;margin-top:17px;margin-right:5px;" onclick="sendContactRequest({$arrDatos.COD_USER})">
+			>>
+		</div>
+	</div>
+</div>
+{/foreach}

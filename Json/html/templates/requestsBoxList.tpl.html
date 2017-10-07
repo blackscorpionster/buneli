@@ -1,0 +1,23 @@
+{foreach from=$solicitudes key=ordenSolucitud item=SolicitudArr}
+	<div id="divRequestUser{$SolicitudArr.COD_USER}" style="position:relative;height:30px;min-width:300px;margin-top:5px;
+				{if $SolicitudArr.TIPO==1}
+					background-color:#D3F291;left:5px;
+				{else}
+					background-color:#C9E4FC;left:-5px;
+				{/if}" onmouseover="askAcceptOrDiscard('on',{$SolicitudArr.COD_USER})"  onmouseout="askAcceptOrDiscard('off',{$SolicitudArr.COD_USER})">
+		<div>
+			{$SolicitudArr.USER_NAME}
+		</div>
+		<div style="font-size:10px;padding-left:15px;">
+			{$SolicitudArr.LINK_MESSAGE} 
+		</div>
+		<span style="font-size:8px;position:absolute;top:0px;right:0px;">{$SolicitudArr.FEC_START}</span>
+		
+		<div onclick="acceptOrDiscardContact(3,{$SolicitudArr.COD_USER},{$SolicitudArr.TIPO},'{$SolicitudArr.TXT_NAME}','{$SolicitudArr.TXT_SURNAME}')" id="discardUser{$SolicitudArr.COD_USER}" title="{$optionDiscard}" class="aceptordiscard" style="background-color:#000000;right:0px;"></div>
+		
+		{if $SolicitudArr.TIPO==2}
+			<div onclick="acceptOrDiscardContact(1,{$SolicitudArr.COD_USER},{$SolicitudArr.TIPO},'{$SolicitudArr.TXT_NAME}','{$SolicitudArr.TXT_SURNAME}')"id="acceptUser{$SolicitudArr.COD_USER}" title="{$optionAccept}" class="aceptordiscard" style="background-color:#FFFFFF;left:0px;"></div>
+		{/if}
+		
+	</div>
+{/foreach}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kellk</title>
+	<link href="../style/Json.css" type="text/css" rel="StyleSheet">
+</head>
+<body {$onload}>
+	<form name="frmMainApp" id="frmMainApp">
+		<div id="div_master" class="master">
+			<div id="div_loading" class="loading">Loading...</div>
+			<div id="div_Logo" class="logo">Kellk</div>
+		</div>
+		<div class="clFooter">
+			<div style="float:left;margin:10px;">
+				<div id="divAbout" onclick="fn_showImportantInfo('divAboutKellkCenter','about.php')" style="cursor:pointer;margin-top:5px;float:left;margin-right:20px;">
+				</div>
+				<div id="divConditions" onclick="fn_showImportantInfo('divTermsKellkCenter','terms.php')" style="cursor:pointer;margin-top:5px;float:left;margin-right:20px;">
+				</div>
+				<div id="divHelp" onclick="fn_showImportantInfo('divHelpKellkCenter','help.php')" style="cursor:pointer;margin-top:5px;float:left;margin-right:20px;">
+				</div>
+			</div>
+		</div>
+	</form>
+	<form name="frmJson" id="frmJson" enctype="multipart/form-data">
+		<div id="div_main_form">
+		</div>
+	</form>
+</body>
+</html>
+<script language="JavaScript" src="../../buneli/libs/YUI/yahoo-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="../../buneli/libs/YUI/event-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="../../buneli/libs/YUI/json-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="../../buneli/libs/YUI/connection-min.js" type="text/javascript"></script>
+<script language="JavaScript" src="../../buneli/libs/bugui/buneli_build.js" type="text/javascript"></script>
+<script language="JavaScript" src="../../buneli/libs/AjaxAppMgr.js" type="text/javascript"></script>
+<script language="JavaScript" src="../javascript/Json.js" type="text/javascript"></script>

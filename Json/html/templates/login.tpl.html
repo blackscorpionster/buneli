@@ -1,0 +1,17 @@
+<div id="divLogin" style="border-width:1px;position:absolute;border-style:solid;padding:10px 10px 10px 10px;">
+	<div style="margin-top:10px;">
+		{$userText}
+	</div>
+	<div style="margin-top:10px;">
+		<input type="text" id="txtLogin" name="txtLogin" class="textBox" value="" />
+	</div>
+	<div style="margin-top:10px;">
+		{$passText}
+	</div>
+	<div style="margin-top:10px;">
+		<input type="password" id="txtPass" name="txtPass" class="textBox" />
+	</div>
+	<div style="margin-top:10px;text-align:center;">
+		<input class="button" type="button" id="btIngresar" name="btIngresar" value="{$buttonText}" onClick="validateLogin(this.form)" />
+	</div>
+</div>

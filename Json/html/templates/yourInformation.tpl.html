@@ -1,0 +1,39 @@
+<div class="JasonSaysChatBox" style="min-width:280px;min-height:200px;_width:280px;" id="divYourInfo">
+	<div style="position:relative;" >
+		<div style="position:relative;">{$tittle}</div>
+		<div class="closeX" title="" onclick="byebye('divYourInfo')">X</div>
+	</div>
+	<div class="JsonSaysRequestsBox">
+		<div {if $userData.TXT_EMAIL|count_characters > 20} title="{$userData.TXT_EMAIL}" {/if} id="divEmailInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divEmailInfo','#E4E4E4')" onmouseout="checkReadBox('divEmailInfo')">
+			<div style="position:relative;">{$emailLbl}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;" onclick="editInfo('text','{$emailLbl}','txtEmailInfo')">
+				{if $userData.TXT_EMAIL|count_characters <= 20} {$userData.TXT_EMAIL} {else} {$userData.TXT_EMAIL|truncate:20} {/if}
+			</div>
+		</div>
+		<div {if $userData.TXT_NAME|count_characters > 20} title="{$userData.TXT_NAME}" {/if} id="divNameInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divNameInfo','#E4E4E4')" onmouseout="checkReadBox('divNameInfo')">
+			<div style="position:relative">{$nameLbl}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">
+				{if $userData.TXT_NAME|count_characters <= 20} {$userData.TXT_NAME} {else} {$userData.TXT_NAME|truncate:20} {/if}
+			</div>
+		</div>
+		<div {if $userData.TXT_SURNAME|count_characters > 20} title="{$userData.TXT_SURNAME}" {/if} id="divSurNameInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divSurNameInfo','#E4E4E4')" onmouseout="checkReadBox('divSurNameInfo')">
+			<div style="position:relative">{$surnameLbl}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">
+				{if $userData.TXT_SURNAME|count_characters <= 20} {$userData.TXT_SURNAME} {else} {$userData.TXT_SURNAME|truncate:20} {/if}
+			</div>
+		</div>
+		<div id="divMobNumberInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divMobNumberInfo','#E4E4E4')" onmouseout="checkReadBox('divMobNumberInfo')">
+			<div style="position:relative;">{$mobNumberLbl}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">{$userData.MOB_NUMBER}</div>
+		</div>
+		<div id="divCountryInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divCountryInfo','#E4E4E4')" onmouseout="checkReadBox('divCountryInfo')">
+			<div style="position:relative;">{$countryLbl}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">{$userData.COD_COUNTRY}</div>
+		</div>
+		<div id="divDeleteQuestion" style="position:relative;min-height:25px;padding-top:10px;margin-top:5px;display:none;">
+		</div>
+		<div id="divCountryInfo" onclick="deleteUserAcount('{$userData.TXT_EMAIL}',0)" style="position:relative;height:25px;padding-top:10px;margin-top:5px;background-color:#FF0000;cursor:pointer;">
+			<div style="position:relative;text-align:center;">{$dropLbl}</div>
+		</div>
+	</div>
+</div>

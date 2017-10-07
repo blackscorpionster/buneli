@@ -1,0 +1,6 @@
+<select name="{$name}" id="{$name}" {if $event>0}onchange="start({$event})"{/if}/>
+	<option value="0"></option>
+	{foreach from="$datos" key=pos item=arrOption}
+		<option value="{$arrOption[$cod]}">{$arrOption[$desc]|lower|capitalize}</option>
+	{/foreach}
+</select>

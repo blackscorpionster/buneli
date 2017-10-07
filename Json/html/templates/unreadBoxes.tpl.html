@@ -1,0 +1,27 @@
+{foreach from=$messages key=codUser item=arrMessages}
+	<div class="JasonSaysChatBox" id="divMainChatBox_user{$codUser}" onmouseover="checkReadBox('divMainChatBox_user{$codUser}')">
+		<div title="{$arrMessages.name|lower|capitalize} {$arrMessages.familyName|lower|capitalize}" style="margin-bottom:10px;">
+			<div style="position:relative;">
+				<div style="position:relative;">{$arrMessages.name|lower|capitalize}</div>
+				<div style="position:absolute;right:20px;top:0px;" id="divCuentaLetras{$codUser}">0</div>
+				<div class="closeX" title="" onclick="byebye('divMainChatBox_user{$codUser}')">X</div>
+			</div>
+		</div>
+		<div style="margin-top:10px;" id="textingWith{$codUser}" class="JsonSaysTextBox">
+			{foreach from=$arrMessages.messages key=codMessage item=messageArr}
+				<div id="{$codMessage}" class="{$messageArr.class}">
+					{$messageArr.message|escape:'htmlall'}
+					<div class="JsonSaysMessageDate" title="{$messageArr.sentDate}">{$messageArr.sentDateShort}</div>
+				</div>
+			{/foreach}
+		</div>
+		<div style="margin-top:10px;">
+			<div style="position:relative;float:left;">
+				<textarea id="txtMsjTo{$codUser}" name="txtMsjTo{$codUser}" class="JsonSaysWriteBox" wrap="hard" onkeyup="checkMessageLength({$codUser},this)"></textarea>
+			</div>
+			<div style="position:relative;float:left;" >
+				<input type="button" name="btSendTo{$codUser}" id="btSendTo{$codUser}" onclick="JsonSaysSendTextTo('{$codUser}')" value=">>" class="JsonSaysSendButton"/>
+			</div>
+		</div>
+	</div>
+{/foreach}

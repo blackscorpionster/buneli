@@ -1,0 +1,15 @@
+{foreach from=$directory key=ordenContacts item=contact}
+
+	<div id="contactFomDirectory{$contact.COD_USER_GUEST}" class="usrContact" {if $contact.COD_STATE==2 }style="background-color:#{if $contact.REQUEST_TYPE=="OUT"}D3F291{else}C9E4FC{/if};" {/if} >
+		
+		<div style="position:absolute;">{$contact.TXT_NAME} {$contact.TXT_SURNAME}</div>
+		
+		{if $contact.COD_STATE==1 }
+			<div title="{$deleteContact}" style="position:absolute;right:20px;cursor:pointer;" onclick="deleteContact({if $contact.REQUEST_TYPE=="OUT"}{$contact.COD_USER_GUEST}{else}{$contact.COD_USER_GUEST}{/if},0,'{$contact.TXT_NAME|lower|capitalize} {$contact.TXT_SURNAME|lower|capitalize}')">
+				X
+			</div>	
+		{/if}
+		
+	</div>
+
+{/foreach}

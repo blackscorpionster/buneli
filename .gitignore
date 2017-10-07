@@ -1,0 +1,7 @@
+adodb5/
+Smarty/
+YUI/
+templates_c/
+templates_cache/
+.metadata
+pass.php

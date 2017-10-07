@@ -1,0 +1,65 @@
+CREATE DATABASE  IF NOT EXISTS `SEGURO` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `SEGURO`;
+-- MySQL dump 10.13  Distrib 5.6.26, for Linux (x86_64)
+--
+-- Host: 127.0.0.1    Database: SEGURO
+-- ------------------------------------------------------
+-- Server version	5.6.26
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `BUNELI_USER`
+--
+
+DROP TABLE IF EXISTS `BUNELI_USER`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `BUNELI_USER` (
+  `cod_user` int(11) NOT NULL,
+  `txt_name` varchar(100) NOT NULL,
+  `txt_surname` varchar(100) NOT NULL,
+  `txt_email` varchar(100) NOT NULL,
+  `txt_pass` varchar(33) NOT NULL,
+  `mob_number` varchar(25) DEFAULT NULL,
+  `dat_singup` date NOT NULL,
+  `dat_singaway` date DEFAULT NULL,
+  `cod_state` tinyint(4) NOT NULL,
+  `cod_country` varchar(3) NOT NULL,
+  `img_user` varchar(100) DEFAULT NULL,
+  `com_file` varchar(50) DEFAULT NULL,
+  `code` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`cod_user`),
+  UNIQUE KEY `buneli_user_idx01` (`txt_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `BUNELI_USER`
+--
+
+LOCK TABLES `BUNELI_USER` WRITE;
+/*!40000 ALTER TABLE `BUNELI_USER` DISABLE KEYS */;
+INSERT INTO `BUNELI_USER` VALUES (2,'Guillermo','Hernandez','guillermo','202cb962ac59075b964b07152d234b70',NULL,'2015-02-01',NULL,1,'CO',NULL,NULL,3624795108),(3,'litza','marin','litza','25d55ad283aa400af464c76d713c07ad',NULL,'2015-02-01',NULL,1,'CO',NULL,NULL,5473986201),(4,'andrés','lópez','aflc1224','231badb19b93e44f47da1bd64a8147f2',NULL,'2015-02-01',NULL,1,'CO',NULL,NULL,1869705234);
+/*!40000 ALTER TABLE `BUNELI_USER` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2015-10-26 20:56:15

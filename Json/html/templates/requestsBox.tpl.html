@@ -1,0 +1,12 @@
+<div class="JasonSaysChatBox" id="divMainRequestsBox" onmouseover="checkReadBox('divMainRequestsBox')">
+	<div>
+		<div style="position:relative;min-width:200px;">
+			<div style="position:relative;">{$tittle}</div>
+			<div style="position:absolute;right:20px;top:0px;" id="divCuentaSolicutudes">{$cantidad}</div>
+			<div class="closeX" title="" onclick="byebye('divMainRequestsBox')">X</div>
+		</div>
+	</div>
+	<div class="JsonSaysRequestsBox" id="JsonSaysRequestsBox">
+		{include file=requestsBoxList.tpl.html}
+	</div>
+</div>
