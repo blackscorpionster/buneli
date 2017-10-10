@@ -18,6 +18,11 @@
 			
 			//die(">>>>>".$codUser."<<>>".$email."<<>>".$form["txtEmailDelete"]);
 			
+			if($form["txtEmailDelete"] != $email){
+				trigger_error("no_deletion",E_USER_WARNING);
+				return false;
+			}
+			
 			$bd = new bdd_access("_SEGURO");
 			$ret = $bd->deleteUserAccount($codUser,$email,$form["txtEmailDelete"]);
 			

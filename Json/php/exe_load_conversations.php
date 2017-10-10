@@ -28,50 +28,9 @@
 			$codUser = $userData["COD_USER"];
 			//print_r($userData);die();
 			//print_r($_SESSION["readMessages"]);die("PRIMERA");
-			//$oldMessages = $_SESSION["readMessages"];
 			$codUserForm = "";
-			//Check the new messages in the form, then mark them like read
-			//If this occurs, means that is the firt time the automaic process is going to get the new messages
-			/*if(count($oldMessages) > 0)
-			{
-				//print_r($form);
-				//print_r($_SESSION["readMessages"]);
-				//die("MASIVO <<<");
-				//Go through the form array and get the chatting boxes displayed
-				foreach($form as $pos=>$nameObject)
-				{
-					//If the form object is a chatting box, then look for the codes belonging to it
-					if( strpos($pos,'MsjTo')>0 )
-					{
-						$codUserForm = substr($pos,8);
-						//die(">>>>".$pos.">>>".$codUserForm);
-						///Go through the messages previously retreived, and gets the codes of those that
-						//must be marked as read
-						foreach($oldMessages as $posa=>$codMessage)
-						{
-							//die( ">>>".$pos.">>".$codMessage.">>>".substr( $codMessage,0, strpos($codMessage,'_') ) );
-							if( substr( $codMessage,0, strpos($codMessage,'_') ) == $codUserForm )
-							{
-								//die("MENSAJE DE ".$codUserForm." >>> ".$codMessage." >>> LEIDO");
-								//$arrReadMessages[$codUserForm][$posa]=$codMessage;
-								//
-								$bd->setMessageRead($codMessage);
-							}
-						}
-					}
-					//die("<<<<<<<<<<<".strpos($pos,'MsjTo'));
-				}
-				unset($_SESSION["readMessages"]);
-			}*/
-			
-			//print_r($oldMessages);
-			//print">>>>>>";
-			//print_r($_SESSION);
-			//die(">>>>");
 
 			$messages = $bd->getUserMessages($codUser,$actionMessage,$getMessagesFrom);
-			//
-			//print_r($messages);die("X MESSAE >> ".$actionMessage." ** ".$codUser);
 			
 			//Creates a new chatbox with every different user who has sent a message to the user
 			$sentMessages = array();
@@ -101,26 +60,17 @@
 					$sentMessages[$decodedId[0]]["messages"][$arrMEssage["ID_MESSAGE"]]["message"] = $decodedMessage[1];
 					$sentMessages[$decodedId[0]]["messages"][$arrMEssage["ID_MESSAGE"]]["class"] = $arrMEssage["CLASSNAME"];
 				}
-				//print_r($sentMessages);die();
 				////Adicionar que cuente los mensajes y los acomule para guardarls en la session una ves haya
 				//iniciado para mostrar la cantidad de nuevos mensajes por cada usuario a la izquierda del contacto
-				//$form["unreadMessages"] = $sentMessages;
-				//$_SESSION["unreadMessages"] = $sentMessages;
 			} elseif($getMessagesFrom) {//If there are not messages available from this user, creates an empty array with the basic structure but no messages
 				$name = fn_findFromName($getMessagesFrom,$_SESSION["buneli_user_contacts"]);
 				$sentMessages[$getMessagesFrom]["name"] = $name[0];
 				$sentMessages[$getMessagesFrom]["familyName"] = $name[1];
 				$sentMessages[$getMessagesFrom]["messages"] = array();
 			}
+			//print_r($sentMessages);die("Messages");
+			
 			$form["unreadMessages"] = $sentMessages;
-			//else
-			//{
-			//	trigger_error("no_new_messages",E_USER_NOTICE);
-			//	$ret = false;
-			//}
-			//if(count($codUnreadMessage)>0)
-			//	$_SESSION["readMessages"] = $codUnreadMessage;
-			//print_r($form["unreadMessages"]);die();
 			
 			return $ret;
 		}

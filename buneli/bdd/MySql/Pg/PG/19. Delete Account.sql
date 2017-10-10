@@ -20,7 +20,7 @@ BEGIN
   and   txt_email	= p_emailConf
   ;
 
-  IF lnuuser THEN
+  IF lnuuser IS NOT NULL THEN
     BEGIN
       DELETE FROM JSON_MESSAGE
       where		from_user = p_codUser

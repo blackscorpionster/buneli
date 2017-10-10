@@ -536,10 +536,15 @@ function updateContactsAndRequests(response)
 	currentContactsNumber = 0;
 	if(response[2].length > 0){
 		for(i=0;i<response[2].length;i++){
-			currentContact = document.getElementById("divContact"+response[2][i])
-			if(currentContact !== undefined){
-				currentContactsNumber++;
-				contacClass["divContact"+response[2][i]] = currentContact.className;
+			try{
+				currentContact = document.getElementById("divContact"+response[2][i])
+				if(currentContact !== undefined && currentContact != null){
+					currentContactsNumber++;
+					contacClass["divContact"+response[2][i]] = currentContact.className;
+				}
+			} catch(e){
+				console.log("Contact not found on the original list")
+				null;//This will probably happen when the user has just been accepted as a contact
 			}
 		}
 	}

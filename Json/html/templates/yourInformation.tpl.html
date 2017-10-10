@@ -22,10 +22,10 @@
 				{if $userData.TXT_SURNAME|count_characters <= 20} {$userData.TXT_SURNAME} {else} {$userData.TXT_SURNAME|truncate:20} {/if}
 			</div>
 		</div>
-		<div id="divMobNumberInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divMobNumberInfo','#E4E4E4')" onmouseout="checkReadBox('divMobNumberInfo')">
+		{*<div id="divMobNumberInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divMobNumberInfo','#E4E4E4')" onmouseout="checkReadBox('divMobNumberInfo')">
 			<div style="position:relative;">{$mobNumberLbl}</div>
 			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">{$userData.MOB_NUMBER}</div>
-		</div>
+		</div>*}
 		<div id="divCountryInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divCountryInfo','#E4E4E4')" onmouseout="checkReadBox('divCountryInfo')">
 			<div style="position:relative;">{$countryLbl}</div>
 			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">{$userData.COD_COUNTRY}</div>

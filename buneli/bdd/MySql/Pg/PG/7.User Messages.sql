@@ -9,7 +9,20 @@ CREATE OR REPLACE FUNCTION FN_USERMESSAGES
 RETURNS TABLE (ID_MESSAGE VARCHAR, TXT_MESSAGE VARCHAR, CODE BIGINT, CLASSNAME VARCHAR, fec_message TIMESTAMP WITHOUT TIME ZONE) AS
 $BODY$
     --
-        WITH receivedMessages AS (
+        WITH newMessagesFrom AS (
+        
+          SELECT  distinct from_user
+            FROM    JSON_MESSAGE a,
+                    JSON_CONTACT b
+            WHERE   a.to_user = pty_user
+            and     (a.ind_read is null or a.ind_read = 0)
+            and     (  
+              (b.cod_user_host = a.to_user and b.cod_user_guest = a.from_user and b.cod_state = 1) 
+              OR 
+              (b.cod_user_guest = a.to_user and b.cod_user_host = a.from_user and b.cod_state = 1) 
+            )
+            
+        ),receivedMessages AS (
           
             SELECT  from_user||'_'||to_user||'_'||TO_CHAR(fec_message,'DDMMYYYYHH24MISS') as ID_MESSAGE,
                     txt_message AS TXT_MESSAGE,
@@ -25,7 +38,11 @@ $BODY$
             FROM    JSON_MESSAGE a,
                     JSON_CONTACT b
             WHERE   a.to_user = pty_user -- Los mensajes para el usuatio
-            AND CASE WHEN pty_fromuser IS NOT NULL THEN a.from_user = pty_fromuser ELSE true end
+            AND   CASE WHEN pty_fromuser IS NOT NULL THEN 
+                    a.from_user = pty_fromuser  -- Mensajes de un usuarion especifico, cuando se da click en uno de los contactos en la derecha
+                  ELSE
+                    a.from_user in (SELECT * FROM newMessagesFrom)-- De los usuarios que enviaron mensajes mientras el usuario estaba fuera de linea
+                  end
             --and     (a.ind_read is null or a.ind_read = 0)
             -- Y que el contacto de los dos usuarios este activo
             and     (  

@@ -37,6 +37,7 @@
 
 	$contriesCombo = $smarty->combo($comboCountry,"cmbCountries","COD_COUNTRY","TXT_COUNTRY");
 	
+	//print_r($comboCountry);
 	//die(">>>>>".$contriesCombo);
 
 	$smarty->assign("buttonText",$buttonText);

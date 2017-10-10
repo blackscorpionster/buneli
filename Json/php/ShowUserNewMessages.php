@@ -25,7 +25,8 @@
 			//print($boxes);die(">>>>>>>>>");
 
 			$response->setFunctionExc("manageNewMessages");
-			
+			//print_r($response);
+			//die(">>>");
 			/////////////////Always use this to get the tittle of the option ////////////////
 			$tittle = $bd->getSingleMessage($_REQUEST["lang"],'unread_messages');
 			/////////////////////////////////////////////////////////////////////////////////
