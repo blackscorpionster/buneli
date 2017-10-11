@@ -1,4 +1,4 @@
-create table buneli_user
+﻿create table buneli_user
 (
   cod_user number not null,
   txt_name varchar2(100) not null,
@@ -13,7 +13,12 @@ create table buneli_user
   img_user    varchar2(100)
 );
 
+
+alter table buneli_user add com_file varchar2(50);
+
 alter table BUNELI_USER add code NUMBER;
+
+alter table BUNELI_USER add pass_recovery_email varchar2(100) null;
 
 create table buneli_state
 (
@@ -101,5 +106,3 @@ create unique index buneli_user_idx01 on buneli_user(txt_email);
 --06082012
 alter table buneli_option_dictionary add constraint buneli_ipdi_pk primary key (txt_option,cod_language);
 
-
-alter table buneli_user add com_file varchar2(50);

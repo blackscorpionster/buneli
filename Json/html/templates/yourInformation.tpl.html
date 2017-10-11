@@ -25,14 +25,17 @@
 		{*<div id="divMobNumberInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divMobNumberInfo','#E4E4E4')" onmouseout="checkReadBox('divMobNumberInfo')">
 			<div style="position:relative;">{$mobNumberLbl}</div>
 			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">{$userData.MOB_NUMBER}</div>
-		</div>*}
+		</div>
 		<div id="divCountryInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divCountryInfo','#E4E4E4')" onmouseout="checkReadBox('divCountryInfo')">
 			<div style="position:relative;">{$countryLbl}</div>
 			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">{$userData.COD_COUNTRY}</div>
-		</div>
+		</div>*}
 		<div id="divDeleteQuestion" style="position:relative;min-height:25px;padding-top:10px;margin-top:5px;display:none;">
 		</div>
-		<div id="divCountryInfo" onclick="deleteUserAcount('{$userData.TXT_EMAIL}',0)" style="position:relative;height:25px;padding-top:10px;margin-top:5px;background-color:#FF0000;cursor:pointer;">
+		<div id="divSetUpAccount" onclick="askEmailAddress('{$userData.TXT_EMAIL}')" style="color:#FFFFFF;position:relative;height:25px;padding-top:10px;margin-top:5px;background-color:#0905FC;cursor:pointer;">
+			<div style="position:relative;text-align:center;">{$passRecoveryLabel}</div>
+		</div>
+		<div id="divDeleteAccount" onclick="deleteUserAcount('{$userData.TXT_EMAIL}',0)" style="color:#FFFFFF;position:relative;height:25px;padding-top:10px;margin-top:5px;background-color:#FF0000;cursor:pointer;">
 			<div style="position:relative;text-align:center;">{$dropLbl}</div>
 		</div>
 	</div>

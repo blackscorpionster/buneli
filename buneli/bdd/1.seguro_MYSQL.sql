@@ -21,6 +21,7 @@ alter table BUNELI_USER add com_file varchar(50);
 
 alter table BUNELI_USER add code BIGINT;
 
+alter table BUNELI_USER add pass_recovery_email varchar(100) null;
 --
 
 

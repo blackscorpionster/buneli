@@ -22,9 +22,10 @@
 			$emailLbl = $bd->getSingleMessage( $form["lang"],"user_text" );
 			$nameLbl =$bd->getSingleMessage( $form["lang"],"user_fname" );
 			$surnameLbl =$bd->getSingleMessage( $form["lang"],"user_lname" );
-			$mobNumberLbl =$bd->getSingleMessage( $form["lang"],"mobile_number" );
+			//$mobNumberLbl =$bd->getSingleMessage( $form["lang"],"mobile_number" );
 			$countryLbl =$bd->getSingleMessage( $form["lang"],"country" );
 			$dropLbl =$bd->getSingleMessage( $form["lang"],"drop_account" );
+			$passRecoveryLabel =$bd->getSingleMessage( $form["lang"],"recovery_addr" );
 
 			//Titulo
 			$smarty->assign("tittle", $tittle);
@@ -32,9 +33,11 @@
 			$smarty->assign("emailLbl", $emailLbl);
 			$smarty->assign("nameLbl", $nameLbl);
 			$smarty->assign("surnameLbl", $surnameLbl);
-			$smarty->assign("mobNumberLbl", $mobNumberLbl);
+			//$smarty->assign("mobNumberLbl", $mobNumberLbl);
 			$smarty->assign("countryLbl", $countryLbl);
 			$smarty->assign("dropLbl", $dropLbl);
+			$smarty->assign("passRecoveryLabel", $passRecoveryLabel);
+			
 			
 			//Datos
 			$smarty->assign("userData", $userData);

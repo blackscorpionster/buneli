@@ -644,3 +644,8 @@ function drawImportantInfo(response)
 	}
 	BUNELI.url = "../php/Json.php";
 }
+
+
+function askEmailAddress(userName){
+	alert("Settng up email for "+userName)
+}
