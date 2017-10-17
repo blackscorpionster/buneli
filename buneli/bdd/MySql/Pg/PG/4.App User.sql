@@ -1,4 +1,5 @@
-﻿CREATE OR REPLACE FUNCTION FN_VALIDATE_USER
+﻿DROP FUNCTION IF EXISTS FN_VALIDATE_USER(varchar, varchar);
+CREATE OR REPLACE FUNCTION FN_VALIDATE_USER
 (
     IN pty_user    varchar(100),            
     IN pty_pass    varchar(33)
@@ -14,7 +15,9 @@
                COD_COUNTRY VARCHAR,
                IMG_USER VARCHAR,
                COM_FILE VARCHAR,
-               CODE BIGINT) AS
+               CODE BIGINT,
+                PASS_RECOVERY_EMAIL VARCHAR
+               ) AS
  $BODY$
 	select  cod_user as COD_USER, 
                 txt_name as TXT_NAME, 
@@ -28,7 +31,8 @@
                 cod_country as COD_COUNTRY, 
                 img_user as IMG_USER, 
                 com_file as COM_FILE,
-                code       as CODE
+                code       as CODE,
+                PASS_RECOVERY_EMAIL
 	from    BUNELI_USER a
 	where   a.txt_email = pty_user
 	and     a.txt_pass = pty_pass

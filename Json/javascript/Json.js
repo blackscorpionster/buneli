@@ -647,5 +647,8 @@ function drawImportantInfo(response)
 
 
 function askEmailAddress(userName){
-	alert("Settng up email for "+userName)
+	alert("Settng up email for "+userName)		
+	BUNELI.url = "../php/Json.php";
+	BUNELI.action = 23;
+	BUNELI.postBackAction();
 }

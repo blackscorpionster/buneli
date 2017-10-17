@@ -1,0 +1,29 @@
+<div class="JasonSaysChatBox" style="min-width:280px;min-height:200px;_width:280px;" id="divUpdateYourInfo">
+	<div style="position:relative;" >
+		<div style="position:relative;">{$tittle}</div>
+		<div class="closeX" title="" onclick="byebye('divUpdateYourInfo')">X</div>
+	</div>
+	<div class="JsonSaysRequestsBox">
+		<div id="divNameInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divNameInfo','#E4E4E4')" onmouseout="checkReadBox('divNameInfo')">
+			<div style="position:relative">{$nameLbl}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">
+				<input type="text" value="{$userData.TXT_NAME}" />
+			</div>
+		</div>
+		<div id="divSurNameInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divSurNameInfo','#E4E4E4')" onmouseout="checkReadBox('divSurNameInfo')">
+			<div style="position:relative">{$surnameLbl}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">
+				<input type="text" value="{$userData.TXT_SURNAME}"/>
+			</div>
+		</div>
+		<div id="divEmailRecvInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divEmailRecvInfo','#E4E4E4')" onmouseout="checkReadBox('divEmailRecvInfo')">
+			<div style="position:relative">{$email_label}</div>
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">
+				<input type="text" value="{$userData.PASS_RECOVETY_EMAIL}"/>
+			</div>
+		</div>
+		<div id="divDeleteAccount" onclick="" style="color:#FFFFFF;position:relative;height:25px;padding-top:10px;margin-top:5px;background-color:#FF0000;cursor:pointer;">
+			<div style="position:relative;text-align:center;">{$saveLbl}</div>
+		</div>
+	</div>
+</div>

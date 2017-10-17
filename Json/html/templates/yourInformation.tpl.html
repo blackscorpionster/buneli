@@ -6,7 +6,7 @@
 	<div class="JsonSaysRequestsBox">
 		<div {if $userData.TXT_EMAIL|count_characters > 20} title="{$userData.TXT_EMAIL}" {/if} id="divEmailInfo" style="position:relative;height:25px;padding-top:10px;margin-top:5px;" onmouseover="checkAlertBox('divEmailInfo','#E4E4E4')" onmouseout="checkReadBox('divEmailInfo')">
 			<div style="position:relative;">{$emailLbl}</div>
-			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;" onclick="editInfo('text','{$emailLbl}','txtEmailInfo')">
+			<div style="position:absolute;top:0px;right:0px;padding-top:10px;padding-left:10px;">
 				{if $userData.TXT_EMAIL|count_characters <= 20} {$userData.TXT_EMAIL} {else} {$userData.TXT_EMAIL|truncate:20} {/if}
 			</div>
 		</div>
