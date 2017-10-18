@@ -22,7 +22,7 @@
 			//$emailLbl = $bd->getSingleMessage( $form["lang"],"user_text" );
 			$nameLbl =$bd->getSingleMessage( $form["lang"],"user_fname" );
 			$surnameLbl =$bd->getSingleMessage( $form["lang"],"user_lname" );
-			//$mobNumberLbl =$bd->getSingleMessage( $form["lang"],"mobile_number" );
+			$legend =$bd->getSingleMessage( $form["lang"],"updateinfo_desc" );
 			$email_label =$bd->getSingleMessage( $form["lang"],"email_label" );
 			$saveLbl =$bd->getSingleMessage( $form["lang"],"accept" );
 			
@@ -34,7 +34,7 @@
 			$smarty->assign("nameLbl", $nameLbl);
 			$smarty->assign("surnameLbl", $surnameLbl);
 			//$smarty->assign("mobNumberLbl", $mobNumberLbl);
-			//$smarty->assign("countryLbl", $countryLbl);
+			$smarty->assign("legend", $legend);
 			$smarty->assign("saveLbl", $saveLbl);
 			$smarty->assign("email_label", $email_label);
 			

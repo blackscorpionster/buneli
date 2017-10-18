@@ -646,9 +646,18 @@ function drawImportantInfo(response)
 }
 
 
-function askEmailAddress(userName){
-	alert("Settng up email for "+userName)		
+function askEmailAddress(userName, infoWindow){	
 	BUNELI.url = "../php/Json.php";
 	BUNELI.action = 23;
 	BUNELI.postBackAction();
+	byebye(infoWindow);
+}
+
+function updateInfo(userId){
+	BUNELI.reqForm = BUNELI.auxForm;
+	BUNELI.setTempValue("txtLogin",userId);
+	BUNELI.setTempValue("txtNameUpdate",document.getElementById("txtNameUpdate").value);
+	BUNELI.setTempValue("txtSurNameUpdate",document.getElementById("txtSurNameUpdate").value);
+	BUNELI.setTempValue("txtEmailUpdate",document.getElementById("txtEmailUpdate").value);
+	callOption(24);
 }

@@ -149,6 +149,10 @@
 			$data = $this->transaction($plsql);
 			return $data;
 		}
+		
+		function updateUserInfo($form){
+			print_r($form); die("MODEL");
+		}
 
 	}
 ?>
