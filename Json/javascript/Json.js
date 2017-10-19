@@ -661,3 +661,8 @@ function updateInfo(userId){
 	BUNELI.setTempValue("txtEmailUpdate",document.getElementById("txtEmailUpdate").value);
 	callOption(24);
 }
+
+function showYourInfo(response){
+	byebye("divUpdateYourInfo");
+	setObjectAsANewSon(response);
+}

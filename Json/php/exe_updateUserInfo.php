@@ -14,11 +14,18 @@
 
 			$bd = new bdd_access("_SEGURO");
 			
-			if( $ret = $bd->updateUserInfo($form) )
-				trigger_error("success",E_USER_NOTICE);
-			else
+			$userData = $_SESSION["buneli_user_data"];
+			
+			$ret = $bd->updateUserInfo($userData["COD_USER"], $form);
+			
+			if( !$ret )
 				trigger_error("failure",E_USER_WARNING);
-
+			else {
+				//UPdates the session with the new info
+				$_SESSION["buneli_user_data"]["TXT_NAME"] = $form['txtNameUpdate'];
+				$_SESSION["buneli_user_data"]["TXT_SURNAME"] = $form['txtSurNameUpdate'];
+				$_SESSION["buneli_user_data"]["PASS_RECOVERY_EMAIL"] = $form['txtEmailUpdate'];
+			}
 			return $ret;
 		}
 	}

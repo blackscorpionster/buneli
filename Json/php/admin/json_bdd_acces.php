@@ -150,8 +150,14 @@
 			return $data;
 		}
 		
-		function updateUserInfo($form){
-			print_r($form); die("MODEL");
+		function updateUserInfo($codUser, $form){
+			//print_r($form); die("MODEL >> ".json_encode($form));
+			$updateddata = json_encode($form);
+			
+			$data = $this->transaction_param("SELECT PR_UPDATE(?::integer,?::json)",array($codUser,$updateddata));
+			
+			return $data;
+
 		}
 
 	}

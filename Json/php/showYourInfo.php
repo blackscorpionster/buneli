@@ -45,14 +45,17 @@
 			
 			//$boxes = utf8_encode($boxes);
 			//print($boxes);die();
-			$response->setFunctionExc("setObjectAsANewSon");
+			$response->setFunctionExc("showYourInfo");
+			
+			if($form["action"] == 21)
+				$response->setFunctionExc("setObjectAsANewSon");
 			
 			$response->setResponse( 
 									array(
 											array("divMsgBoxes",$boxes,"divYourInfo")
 										 )
 									);
-			
+			//print_r($response);die("<<<<<");
 			return $response;
 		}
 	}

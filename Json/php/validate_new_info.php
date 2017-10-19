@@ -10,7 +10,7 @@
 	{
 		function buneli_form_validate(&$form)
 		{
-			print_r($form);die("VALIDATE");
+			//print_r($form);die("VALIDATE");
 			
 			$userData = $_SESSION["buneli_user_data"];
 			if(count($userData) <= 0 ){
@@ -27,7 +27,7 @@
 			$ret = true;
 			
 			
-			if($userData["TXT_NAME"] != $txtLogin ){
+			if($userData["TXT_EMAIL"] != $txtLogin ){
 				trigger_error("wrong_session",E_USER_ERROR);
 				return false;
 			}
