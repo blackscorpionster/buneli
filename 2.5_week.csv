@@ -1,9 +1,9 @@
 time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
-2018-08-01T04:40:24.420Z,19.4009991,-155.2640076,1.55,2.46,md,10,93,0.003343,0.11,hv,hv70505897,2018-08-01T04:43:26.270Z,"4km SW of Volcano, Hawaii",earthquake,0.56,0.33,0.07,4,automatic,hv,hv
-2018-08-01T04:40:18.600Z,19.421833,-155.3014984,0.17,2.93,md,11,123,0.009793,0.16,hv,hv70505902,2018-08-01T04:43:33.410Z,"6km W of Volcano, Hawaii",earthquake,0.44,0.35,0.44,4,automatic,hv,hv
-2018-08-01T03:50:33.330Z,19.3863335,-155.2884979,-1.09,2.53,ml,21,64,0.006344,0.27,hv,hv70505742,2018-08-01T03:56:14.280Z,"7km SW of Volcano, Hawaii",earthquake,0.2,0.33,0.4,16,automatic,hv,hv
-2018-08-01T03:34:33.810Z,19.4130001,-155.2720032,0.94,2.96,ml,35,28,0.01148,0.28,hv,hv70505692,2018-08-01T03:40:15.030Z,"4km WSW of Volcano, Hawaii",earthquake,0.24,0.19,2.87,31,automatic,hv,hv
-2018-08-01T03:29:12.640Z,19.4101658,-155.2675018,0.92,2.96,ml,41,36,0.007446,0.17,hv,hv70505682,2018-08-01T03:34:52.580Z,"3km SW of Volcano, Hawaii",earthquake,0.2,0.14,2.77,34,automatic,hv,hv
+2018-08-01T04:40:24.420Z,-27.472912,153.027715,1.55,2.46,md,10,93,0.003343,0.11,hv,redeye1,2018-08-01T04:43:26.270Z,"4km SW of Volcano, Hawaii",earthquake,0.56,0.33,0.07,4,automatic,hv,hv
+2018-08-01T04:40:18.600Z,-27.503597,153.036896,0.17,2.93,md,11,123,0.009793,0.16,hv,redeye2,2018-08-01T04:43:33.410Z,"6km W of Volcano, Hawaii",earthquake,0.44,0.35,0.44,4,automatic,hv,hv
+2018-08-01T03:50:33.330Z,-35.009507,138.940013,-1.09,2.53,ml,21,64,0.006344,0.27,hv,redeye3,2018-08-01T03:56:14.280Z,"7km SW of Volcano, Hawaii",earthquake,0.2,0.33,0.4,16,automatic,hv,hv
+2018-08-01T03:34:33.810Z,-35.088193,138.735192,0.94,2.96,ml,35,28,0.01148,0.28,hv,redeye4,2018-08-01T03:40:15.030Z,"4km WSW of Volcano, Hawaii",earthquake,0.24,0.19,2.87,31,automatic,hv,hv
+2018-08-01T03:29:12.640Z,-35.002661,138.61951,0.92,2.96,ml,41,36,0.007446,0.17,hv,redeye5,2018-08-01T03:34:52.580Z,"3km SW of Volcano, Hawaii",earthquake,0.2,0.14,2.77,34,automatic,hv,hv
 2018-08-01T03:28:37.730Z,19.4143333,-155.2731628,1.86,2.9,ml,12,74,0.01118,0.1,hv,hv70505677,2018-08-01T03:34:20.770Z,"4km WSW of Volcano, Hawaii",earthquake,0.53,0.67,2.46,31,automatic,hv,hv
 2018-08-01T03:03:02.680Z,19.4551659,-155.1208344,3.09,2.63,ml,10,317,0.1459,0.29,hv,hv70505597,2018-08-01T03:08:44.370Z,"7km SW of Fern Acres, Hawaii",earthquake,7.5,23.23,0.3,7,automatic,hv,hv
 2018-08-01T02:43:41.080Z,19.3118324,-154.7095032,8.48,2.8,ml,11,355,0.5291,0.3,hv,hv70505522,2018-08-01T02:49:26.340Z,"27km SE of Leilani Estates, Hawaii",earthquake,21.87,22.5,0.24,8,automatic,hv,hv
