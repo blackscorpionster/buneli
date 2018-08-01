@@ -1,0 +1,68 @@
+[
+  {
+      geometry: new Point({
+          latitude: -27.514993, 
+          longitude: 153.022626
+      }),
+      attributes: {
+          ObjectID: 1,
+          name: "KATL",
+          fltid: "UAL1"
+      }
+  },
+  {
+      geometry: new Point({
+          latitude: -27.525108, 
+          longitude: 152.961874
+      }),
+      attributes: {
+          ObjectID: 2,
+          name: "KZBW",
+          fltid: "SW999"
+      }
+  },
+  {
+      geometry: new Point({
+          latitude: -27.609676, 
+          longitude: 153.233740
+      }),
+      attributes: {
+          ObjectID: 3,
+          name: "WKRP",
+          fltid: "Fever1"
+      }
+  },
+  {
+      geometry: new Point({
+          latitude: -32.981497, 
+          longitude: 138.484161
+      }),
+      attributes: {
+          ObjectID: 3,
+          name: "WKRP",
+          fltid: "Fever1"
+      }
+  },
+  {
+      geometry: new Point({
+          latitude: -32.126862,  
+          longitude: 138.072457
+      }),
+      attributes: {
+          ObjectID: 3,
+          name: "WKRP",
+          fltid: "Fever1"
+      }
+  },
+  {
+      geometry: new Point({
+          latitude: -32.863990,  
+          longitude: 137.157976
+      }),
+      attributes: {
+          ObjectID: 3,
+          name: "WKRP",
+          fltid: "Fever1"
+      }
+  }
+]
