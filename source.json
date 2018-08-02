@@ -4,9 +4,9 @@
       "longitude": 153.022626
     },
     "attributes": {
-      "id": 1,
-      "code": "KATL",
-      "url": "UAL1"
+      "id": 3907643,
+      "code": "DEMO-004249",
+      "url": "https://app.redeyedms.com/artefact/view/3907643"
     }
   },
   {
@@ -15,9 +15,9 @@
         "longitude": 152.961874
     },
     "attributes": {
-        "ObjectID": 2,
-        "name": "KZBW",
-        "fltid": "SW999"
+        "id": 3907645,
+      "code": "DEMO-004251",
+      "url": "https://app.redeyedms.com/artefact/view/3907645"
     }
 },
 {
@@ -26,9 +26,9 @@
         "longitude": 153.233740
     },
     "attributes": {
-        "ObjectID": 3,
-        "name": "WKRP",
-        "fltid": "Fever1"
+        "id": 3907644,
+      "code": "DEMO-004250",
+      "url": "https://app.redeyedms.com/artefact/view/3907644"
     }
 },
 {
@@ -37,9 +37,9 @@
         "longitude": 138.484161
     },
     "attributes": {
-        "ObjectID": 3,
-        "name": "WKRP",
-        "fltid": "Fever1"
+        "id": 3907636,
+      "code": "DEMO-004246",
+      "url": "https://app.redeyedms.com/artefact/view/3907636"
     }
 },
 {
@@ -48,9 +48,9 @@
         "longitude": 138.072457
     },
     "attributes": {
-        "ObjectID": 3,
-        "name": "WKRP",
-        "fltid": "Fever1"
+        "id": 3907635,
+      "code": "DEMO-004245",
+      "url": "https://app.redeyedms.com/artefact/view/3907635"
     }
 },
 {
@@ -59,9 +59,9 @@
         "longitude": 137.157976
     },
     "attributes": {
-        "ObjectID": 3,
-        "name": "WKRP",
-        "fltid": "Fever1"
+        "id": 3907632,
+      "code": "DEMO-004242",
+      "url": "https://app.redeyedms.com/artefact/view/3907632"
     }
 }
 ]
